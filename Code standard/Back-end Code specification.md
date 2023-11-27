@@ -31,7 +31,7 @@
 ```
 正例： localValue / getHttpMessage() /  inputUserId
 ```
-5. **[Mandatory]**The names of constants are all capitalized, and the words are separated by underscores, so that the semantic expression is complete and clear, and the names are not too long.
+5. **[Mandatory]** The names of constants are all capitalized, and the words are separated by underscores, so that the semantic expression is complete and clear, and the names are not too long.
 
 ```
 正例： MAX_STOCK_COUNT
@@ -131,7 +131,7 @@ cache.put(key,  value);
 
 > Note: For a large and complete constant class, you have to use the search function to locate the modified constant, which is not conducive to understanding and maintenance.
 
-4. **[Recommended]**There are five reuse levels of constants: shared constants across applications, shared constants within applications, shared constants in sub-projects, shared constants in packages, and shared constants within classes.
+4. **[Recommended]** There are five reuse levels of constants: shared constants across applications, shared constants within applications, shared constants in sub-projects, shared constants in packages, and shared constants within classes.
 
 - Cross-application shared constant: It is placed in the two-party library, usually under the constant directory in the client. Jar.
 - Shared constants within the application: placed in the constant directory in the modules of one library.
