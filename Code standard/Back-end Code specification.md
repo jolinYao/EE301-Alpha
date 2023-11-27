@@ -44,7 +44,7 @@
 ```
 反例：请勿使用String  args[]的方式来定义。
 ```
-8. **[Mandatory]**Do not add is to variables of Boolean type in POJO class, otherwise some frame parsing will cause serialization errors.
+8. **[Mandatory]** Do not add is to variables of Boolean type in POJO class, otherwise some frame parsing will cause serialization errors.
 
 ```
 反例：定义为基本数据类型boolean isSuccess；的属性，
@@ -61,7 +61,7 @@
 ```
 反例： AbstractClass“缩写”命名成AbsClass；condition“缩写”命名成 condi，此类随意缩写严重降低了代码的可阅读性。
 ```
-11. ***[Recommended]*** If design patterns are used, it is recommended that the specific pattern be reflected in the class name.
+11. **[Recommended]** If design patterns are used, it is recommended that the specific pattern be reflected in the class name.
 
 > Description: The design pattern is embodied in the name, which is helpful for the reader to quickly understand the architecture design idea.
 
@@ -70,7 +70,7 @@
 public class LoginProxy;
 public class ResourceObserver;
 ```
-12. **[Recommended]**Keep the methods and properties in the interface class free of any decorative symbols (as well as public), keep the code concise, and add valid Javadoc comments. Try not to define variables in the interface. If you must define a variable, it must be related to the interface method and is the basic constant of the whole application.
+12. **[Recommended]** Keep the methods and properties in the interface class free of any decorative symbols (as well as public), keep the code concise, and add valid Javadoc comments. Try not to define variables in the interface. If you must define a variable, it must be related to the interface method and is the basic constant of the whole application.
 
 ```
 正例：接口方法签名：void f();
@@ -84,7 +84,7 @@ public class ResourceObserver;
 ```
 正例：CacheServiceImpl实现CacheService接口。
 ```
-* *[Recommended]* If it is an interface name that describes an ability, take the corresponding adjective as the interface name (usually in the form of – able).
+**[Recommended]** If it is an interface name that describes an ability, take the corresponding adjective as the interface name (usually in the form of – able).
 ```
 正例：AbstractTranslator实现 Translatable。
 ```
@@ -157,7 +157,7 @@ A.YES.equals(B.YES)，预期是true，但实际返回为false，导致产生线�
 
 ## (III) Format specification
 
-1. **[Mandatory]**Conventions for the use of braces. If the curly brackets are empty, simply write { } without a new line; if the code block is not empty, then:
+1. **[Mandatory]** Conventions for the use of braces. If the curly brackets are empty, simply write { } without a new line; if the code block is not empty, then:
 
 * Do not wrap before the opening brace.
 * Wrap after open brace.
@@ -221,7 +221,7 @@ sb.append("zi").append("xin")...append
 method(args1, args2, args3, ...
 	, argsX);
 ```
-7. **[Mandatory]**Multiple parameter commas must be followed by a space when method parameters are defined and passed in.
+7. **[Mandatory]** Multiple parameter commas must be followed by a space when method parameters are defined and passed in.
 
 ```
 正例：下例中实参的"a",后边必须要有一个空格。
@@ -239,7 +239,7 @@ float c = 5F;
 StringBuffer sb = new StringBuffer();
 说明：增加sb这个变量，如果需要对齐，则给a、b、c都要增加几个空格，在变量比较多的
 ```
-10. **[Recommended]**A blank line is inserted between groups of execution statements in a method body, between groups of variable definition statements, between different business logics, or between different semantics. There is no need to insert a blank line between the same business logic and semantics.
+10. **[Recommended]** A blank line is inserted between groups of execution statements in a method body, between groups of variable definition statements, between different business logics, or between different semantics. There is no need to insert a blank line between the same business logic and semantics.
 
 > Note: It is not necessary to insert multiple lines of spaces to separate them.
 
@@ -277,7 +277,7 @@ if ((file.open(fileName, "w") != null) && (...) || (...)) {
 ...
 }
 ```
-5. **[Recommended]**The statements in the loop body should be considered for performance. The following operations should be moved outside the loop body as far as possible, such as defining objects, variables, obtaining database connections, and performing unnecessary try-catch operations (whether this try-catch can be moved outside the loop body).
+5. **[Recommended]** The statements in the loop body should be considered for performance. The following operations should be moved outside the loop body as far as possible, such as defining objects, variables, obtaining database connections, and performing unnecessary try-catch operations (whether this try-catch can be moved outside the loop body).
 
 6. **[Recommended]** Interface input parameter protection. In this scenario, the common interface is used for batch operations.
 
@@ -316,7 +316,7 @@ if ((file.open(fileName, "w") != null) && (...) || (...)) {
 ```
 反例：“TCP连接超时”解释成“传输控制协议连接超时”，理解反而费脑筋。
 ```
-7.  **[Recommended]**At the same time of code modification, comments should also be modified accordingly, especially parameters, return values, exceptions, core logic and so on.
+7.  **[Recommended]** At the same time of code modification, comments should also be modified accordingly, especially parameters, return values, exceptions, core logic and so on.
 
 > Explanation: The code is out of sync with the annotation update, just like the road network is out of sync with the navigation software update. If the navigation software is seriously lagging behind, it will lose the meaning of navigation.
 
